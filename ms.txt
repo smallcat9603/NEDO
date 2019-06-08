@@ -1,0 +1,5 @@
+#network-size	mesh-2d	torus-2d	ng
+16	4	3	4
+64	6	4	7
+256	11	8	11
+1024	14	12	36
