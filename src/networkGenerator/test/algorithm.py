@@ -207,8 +207,9 @@ def get_update_sw_sw(sw_sw, sw_node, degree, edges):
     if len(k) > 1:
         for i in range(len(k)-1):
             for j in range(i+1, len(k)):
-                len_shortest_path, ret_path = dijkstra(edges, k[i], k[j])
-                pair_dis[(k[i], k[j])] = len_shortest_path
+                if k[j] not in sw_sw[k[i]] and k[i] not in sw_sw[k[j]]:
+                    len_shortest_path, ret_path = dijkstra(edges, k[i], k[j])
+                    pair_dis[(k[i], k[j])] = len_shortest_path
         pair_dis = sorted(pair_dis.items(), lambda x, y: cmp(x[1], y[1]), reverse=True) 
         while len(pair_dis) > 0:
             pair_a = pair_dis[0][0][0]
