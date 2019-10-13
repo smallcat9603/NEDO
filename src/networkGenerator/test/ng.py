@@ -9,7 +9,7 @@ import algorithm    # algorithms including modified dijkstra algo.
 import tp           # generator of traffic pattern
 import datetime     # output
 import networkx as nx   
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 traffic_pattern = tp.traffic_pattern
 degree = tp.degree  # network degree
@@ -326,6 +326,6 @@ G=nx.read_adjlist(fn)
 nx.draw(G, node_size=80)
 #nx.draw(G, node_size=30, with_labels=True)  
 #nx.draw_networkx_nodes(RG,pos,nodelist=nodelist,node_color='b')
-plt.show()
+#plt.show()
      
             
